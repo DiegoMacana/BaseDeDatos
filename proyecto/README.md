@@ -2,8 +2,8 @@
 
 
 ### ELABORADO POR:
-#### Gabriel Alejandro Silva Lozada
-#### Diego Fernando Macana Naranjo
+#### * Gabriel Alejandro Silva Lozada
+#### * Diego Fernando Macana Naranjo
 
 #### GRUPO: 02
 
