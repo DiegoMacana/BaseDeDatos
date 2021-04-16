@@ -8,7 +8,7 @@
 #### GRUPO: 02
 
 ### REVISADO POR:
-#### MARÍA IRMA DÍAZ
+:snowflake: MARÍA IRMA DÍAZ
 #### ESCUELA COLOMBIANA DE INGENIERÍA JULIO GARAVITO
 #### MBDA (Modelos y bases de datos)
 #### BOGOTÁ D.C.
