@@ -15,3 +15,5 @@
 #### 08 DE FEBRERO DE 2021
 
 ![](https://github.com/DiegoMacana/BaseDeDatos/blob/main/proyecto/images/logo.jpg)
+
+---
