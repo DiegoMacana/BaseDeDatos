@@ -13,3 +13,5 @@
 ### MBDA (Modelos y bases de datos)
 ### BOGOTÁ D.C.
 ### 08 DE FEBRERO DE 2021
+
+![](https://github.com/DiegoMacana/BaseDeDatos/blob/main/proyecto/images/logo.jpg)
