@@ -1,0 +1,40 @@
+/*FOREIGN KEYS*/
+
+ALTER TABLE Tecnicos ADD CONSTRAINT FK_Tecnicos_idEmpleado
+	FOREIGN KEY (idEmpleado) REFERENCES Empleados(idEmpleado)
+	ON DELETE CASCADE;
+
+
+ALTER TABLE Tecnicos ADD CONSTRAINT FK_Tecnicos_idCapacitacion
+	FOREIGN KEY (idCapacitacion) REFERENCES capacitaciones(nombre)
+	ON DELETE CASCADE;
+
+ALTER TABLE AreaDeSoporte ADD CONSTRAINT FK_AreaDeSoporte_idEmpleado
+	FOREIGN KEY (idEmpleado) REFERENCES Tecnicos(idEmpleado)
+	ON DELETE CASCADE;
+
+ALTER TABLE AreaDeSoporte ADD CONSTRAINT FK_AreaDeSoporte_idFactura
+	FOREIGN KEY (idFactura,codigo) REFERENCES Facturas(numero,codigo)
+	ON DELETE CASCADE;
+
+ALTER TABLE AreaDeSoporte ADD CONSTRAINT FK_AreaDeSoporte_bodega
+	FOREIGN KEY (idBodega) REFERENCES Bodegas(idBodega)
+	ON DELETE CASCADE;
+
+ALTER TABLE Bodegas ADD CONSTRAINT FK_Bodegas_idInventario
+	FOREIGN KEY (idBodega) REFERENCES Empleados(idEmpleado)
+	ON DELETE CASCADE;
+
+ALTER TABLE Almacenamientos ADD CONSTRAINT FK_Almacenamientos_herramienta
+	FOREIGN KEY (herramienta) REFERENCES Herramientas(idHerramienta)
+	ON DELETE CASCADE;
+
+ALTER TABLE Facturas ADD CONSTRAINT FK_Facturas_Herramienta
+	FOREIGN KEY (herramienta) REFERENCES Herramientas(idHerramienta)   
+	ON DELETE CASCADE;
+
+/*
+ALTER TABLE Facturas ADD CONSTRAINT FK_Facturas_numeroFactura
+	FOREIGN KEY (numeroFactura) REFERENCES Facturas(numero)   
+	ON DELETE CASCADE;
+*/

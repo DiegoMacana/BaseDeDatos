@@ -1,0 +1,27 @@
+/**/
+ALTER TABLE Empleados ADD CONSTRAINT PK_Empleados
+    PRIMARY KEY (idEmpleado);
+
+ALTER TABLE Tecnicos ADD CONSTRAINT PK_Tecnicos
+    PRIMARY KEY (idEmpleado);
+
+ALTER TABLE Capacitaciones ADD CONSTRAINT PK_Capacitaciones
+    PRIMARY KEY (nombre);
+
+ALTER TABLE Registran ADD CONSTRAINT PK_Registran
+    PRIMARY KEY (herramienta,numeroFactura);
+
+ALTER TABLE AreaDeSoporte ADD CONSTRAINT PK_AreaDeSoporte
+    PRIMARY KEY (idArea);
+
+ALTER TABLE Bodegas ADD CONSTRAINT PK_Bodegas
+    PRIMARY KEY (idBodega);
+
+ALTER TABLE Almacenamientos ADD CONSTRAINT PK_Almacenamientos
+    PRIMARY KEY (idRegistro);
+
+ALTER TABLE Herramientas ADD CONSTRAINT PK_Herramientas
+    PRIMARY KEY (idHerramienta);
+
+ALTER TABLE Facturas ADD CONSTRAINT PK_Facturas
+    PRIMARY KEY (numero,codigo);

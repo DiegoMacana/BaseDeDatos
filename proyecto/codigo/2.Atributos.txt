@@ -1,0 +1,48 @@
+/*ATRIBUTOS*/
+
+/*==================Empleado==================*/
+
+ALTER TABLE Empleados
+ADD CONSTRAINT CK_Empleados_correo
+CHECK(
+	correo LIKE '%@%'
+);
+
+ALTER TABLE Empleados
+ADD CONSTRAINT CK_Empleados_capacitado
+CHECK(
+	UPPER(capacitado) IN ('S','N')
+);
+
+/*=================Almacenamientos=================*/
+
+ALTER TABLE Almacenamientos
+ADD CONSTRAINT CK_Registros_tipo
+CHECK(
+	tipo IN ('Pesada','Liviana')
+);
+
+/*=================Capacitaciones=================*/
+
+ALTER TABLE Capacitaciones
+ADD CONSTRAINT CK_Capacitaciones_aprobado
+CHECK(
+	UPPER(aprobado) IN ('SI','NO')
+);
+
+
+/*===============Herramientas====================*/
+
+ALTER TABLE Herramientas
+ADD CONSTRAINT CK_Herramientas_tipo
+CHECK(
+	tipo IN ('Pesada','Liviana')
+);
+
+/*===============Facturas=======================*/
+
+ALTER TABLE Facturas
+ADD CONSTRAINT CK_Facturas_pago
+CHECK(
+	pago IN ('Tarjeta','Efectivo')
+);

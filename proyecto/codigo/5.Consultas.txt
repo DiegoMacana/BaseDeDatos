@@ -1,0 +1,24 @@
+
+
+Como bodega
+quiero consultar la herramientas más cara
+para poder tener registros en la factura
+
+como tecnico
+quiero consultar el estado del certificado
+para poder renovarlo oportunamente
+
+como bodega
+quiero consultar cuantas unidades hay con el nombre "martillo"
+para poder encargar una mayor cantidad
+
+
+Select max(precio),nombre from herramientas
+group by nombre
+
+Select certificado from tecnicos
+
+Select unidades,herramientas from registros
+where herramientas = "martillo"
+groupo may unidades
+

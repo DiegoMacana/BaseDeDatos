@@ -1,0 +1,48 @@
+Adicionar
+Las herramientas se adicionan en estado activo con el nombre del trabajador
+Las herramientas pesadas deben tener la informacion completa
+
+modificar
+Los cambios de estado para las herramientas son activo <>inactivo, inactivo<>ocupado,ocupado<>activo
+Un trabajador no puede tener mas de 5 herramientas pesadas en estado activo
+
+eliminar
+Para que un trabajador se pueda retirar, debe estar con todas las herramientas en estado inactivo
+
+
+
+
+
+CREATE OR REPLACE TRIGGER actualizar_estado
+BEFORE UPDATE ON Herramienta
+FOR EACH ROW
+DECLARE
+x VARCHAR();
+BEGIN
+	SELECT estado INTO x
+	FROM Herramienta
+	IF: x IS NULL THEN
+		:New.x  := 'activo'
+	ELSE 
+		IF x = 'activo' THEN
+			:Old.x := 'inactivo'
+		END IF;
+		IF X = 'inactivo' THEN
+			:Old.x := 'ocupado'
+		END IF;
+		IF X = 'ocupado' THEN
+			:Old.x := 'activo'
+		END IF;
+		
+	END IF;
+END;
+
+CREATE OR REPLACE TRIGGER eliminar_Datos_trabajador
+BEFORE DELATE ON Empleado
+FOR EACH ROW
+DECLARE
+BEGIN
+	IF: Old.estado <> 'inactivo' THEN
+	RAISE_APPLICATION_ERROR(-20005,'El trabajador no se puede retirar si no tiene todas sus herramientas en estado inactivo');
+	END IF;
+END;

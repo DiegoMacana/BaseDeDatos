@@ -1,0 +1,35 @@
+INSERT INTO Empleados
+VALUES (1000001,'Luis Amaya','luismayita@gmail.com',3132046146,'S');
+
+/*Señora Bodega*/
+INSERT INTO Empleados
+VALUES (1000003,'Roz','Roz@gmail.com',3012547896,'N');
+
+/*Señor Soporte*/
+INSERT INTO Empleados
+VALUES (1000004,'Freddy Murcia','FreddyX@gmail.com',3101455587,'N');
+
+INSERT INTO Tecnicos
+VALUES (1000001,'Herramienta Pesada','Capacitacion Herramienta Pesada');
+
+INSERT INTO Capacitaciones
+VALUES ('Capacitacion Herramienta Pesada',75,'SI');
+
+INSERT INTO Herramientas
+VALUES ('XJAS10231','TaladroXJAS','Pesada',1200000,'Negro');
+
+INSERT INTO Facturas
+VALUES (101,600101,'Germiro Casanares','03/04/21','Efectivo',700000,5,'TaladroXJA');
+
+INSERT INTO Registran
+VALUES (101,'XJAS10231');
+
+INSERT INTO Almacenamientos
+VALUES (1000006,'Pesada','XJASTaladro','10/04/2021',3,'Taladros');
+
+INSERT INTO Registran
+VALUES ('XJAS10231',101);
+
+INSERT INTO AreaDeSoporte
+VALUES (1000004,1000004,101,1000003,600101);
+

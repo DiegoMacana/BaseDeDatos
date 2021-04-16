@@ -1,0 +1,11 @@
+/*ELIMINACION DATOS*/
+
+DELETE FROM Empleados;
+DELETE FROM Tecnicos;
+DELETE FROM Capacitaciones;
+DELETE FROM areaDeSoportes;
+DELETE FROM Bodegas;
+DELETE FROM Almacenamientos;
+DELETE FROM Registran;
+DELETE FROM Herramientas;
+DELETE FROM Facturas;

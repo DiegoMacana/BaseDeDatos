@@ -1,0 +1,65 @@
+CREATE TABLE Empleados(
+  idEmpleado NUMBER(7) NOT NULL,
+  nombre VARCHAR(50) NOT NULL,
+  correo VARCHAR(20), 
+  telefono NUMBER(10) NOT NULL, 
+  capacitado VARCHAR(1) NOT NULL
+);
+
+CREATE TABLE Tecnicos(
+  idEmpleado NUMBER(7) NOT NULL,
+  certificado VARCHAR(50),
+  idCapacitacion VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Capacitaciones(
+  nombre VARCHAR(50) NOT NULL,
+  duracion NUMBER(5) NOT NULL, 
+  aprobado VARCHAR(2) NOT NULL
+);
+
+CREATE TABLE Herramientas(
+  idHerramienta VARCHAR(10) NOT NULL,
+  nombre VARCHAR(20) NOT NULL, 
+  tipo VARCHAR(10) NOT NULL, 
+  precio NUMBER(7) NOT NULL,
+  color VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Facturas(
+  numero NUMBER(3) NOT NULL,
+  codigo NUMBER(6) NOT NULL, 
+  nombrecliente VARCHAR(20) NOT NULL, 
+  fechafacturacion DATE NOT NULL,
+  pago VARCHAR(10) NOT NULL,
+  precio NUMBER(9) NOT NULL,
+  cantidad NUMBER(3) NOT NULL,
+  herramienta VARCHAR(10) NOT NULL 
+);
+
+CREATE TABLE Registran(
+  Herramienta VARCHAR(10) NOT NULL,
+  numeroFactura NUMBER(3) NOT NULL	
+);
+
+CREATE TABLE Almacenamientos(
+  idRegistro NUMBER(7) NOT NULL,
+  tipo VARCHAR(10) NOT NULL, 
+  nombre VARCHAR(20) NOT NULL, 
+  fechaActualizacion DATE NOT NULL,
+  unidades NUMBER(5) NOT NULL,
+  herramienta VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE Bodegas(
+  idBodega NUMBER(7) NOT NULL,
+  tiempoinventario NUMBER(2) NOT NULL 
+);
+
+CREATE TABLE AreaDeSoporte(
+  idArea NUMBER(10) NOT NULL,
+  idBodega NUMBER(7) NOT NULL,
+  idFactura NUMBER(3) NOT NULL,
+  idEmpleado NUMBER(7) NOT NULL,
+  codigo NUMBER(6) NOT NULL
+);
